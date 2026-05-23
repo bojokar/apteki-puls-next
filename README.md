@@ -11,3 +11,9 @@ npm run build
 ```
 
 Dev server: `http://localhost:3000`
+
+Production SEO URL:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://www.pulsapteka.com
+```
