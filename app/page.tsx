@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -45,10 +44,10 @@ export default function Home() {
               Професионална консултация, подбрани продукти и удобни локации в Изгрев и Славейков.
             </Typography>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5}>
-              <Button component={Link} href="/produkti" variant="contained" size="large" endIcon={<ArrowForwardIcon />}>
+              <Button href="/produkti" variant="contained" size="large" endIcon={<ArrowForwardIcon />}>
                 Разгледайте продукти
               </Button>
-              <Button component={Link} href="/kontakti" variant="outlined" color="inherit" size="large">
+              <Button href="/kontakti" variant="outlined" color="inherit" size="large">
                 Намерете аптека
               </Button>
             </Stack>
@@ -123,7 +122,7 @@ export default function Home() {
                   <Typography color="text.secondary" sx={{ mt: 1, mb: 2 }}>
                     {pharmacy.address}
                   </Typography>
-                  <Button component={Link} href="/kontakti" variant="outlined">
+                  <Button href="/kontakti" variant="outlined">
                     Контакти
                   </Button>
                 </CardContent>
