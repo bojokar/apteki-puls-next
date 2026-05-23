@@ -4,12 +4,37 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import StructuredData from '@/components/StructuredData';
+import { siteConfig } from '@/lib/site';
 import { Providers } from './providers';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Денонощни аптеки Пулс',
-  description: 'Денонощни аптеки Пулс - аптеки в Бургас с грижа, продукти и промоции за цялото семейство.',
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.shortName}`,
+  },
+  description: siteConfig.description,
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
+    type: 'website',
+    images: [
+      {
+        url: siteConfig.image,
+        width: 1800,
+        height: 1200,
+        alt: 'Денонощни аптеки Пулс в Бургас',
+      },
+    ],
+  },
   icons: {
     icon: '/favicon.ico',
   },
@@ -32,6 +57,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             gtag('config', 'G-FZBFWVVZ6D');
           `}
         </Script>
+        <StructuredData />
         <Providers>
           <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
             <Header />

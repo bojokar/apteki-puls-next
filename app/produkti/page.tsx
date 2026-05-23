@@ -12,6 +12,13 @@ import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
 import SpaIcon from '@mui/icons-material/Spa';
 import VaccinesIcon from '@mui/icons-material/Vaccines';
 import { productCategories } from '@/lib/data';
+import { createPageMetadata } from '@/lib/site';
+
+export const metadata = createPageMetadata({
+  title: 'Продукти',
+  description: 'Лекарства без рецепта, витамини, минерали, дермокозметика, медицински изделия и природни продукти в Аптеки Пулс.',
+  path: '/produkti',
+});
 
 const icons = [
   <HealingIcon key="healing" />,

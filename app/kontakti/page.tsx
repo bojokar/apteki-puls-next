@@ -11,6 +11,13 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MapIcon from '@mui/icons-material/Map';
 import PlaceIcon from '@mui/icons-material/Place';
 import { pharmacies } from '@/lib/data';
+import { createPageMetadata } from '@/lib/site';
+
+export const metadata = createPageMetadata({
+  title: 'Контакти',
+  description: 'Контакти, адреси, телефони и работно време 24/7 на Денонощни аптеки Пулс в Изгрев и Славейков, Бургас.',
+  path: '/kontakti',
+});
 
 export default function Contacts() {
   return (

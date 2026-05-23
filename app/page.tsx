@@ -13,6 +13,12 @@ import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import { pharmacies, promotions } from '@/lib/data';
+import { createPageMetadata } from '@/lib/site';
+
+export const metadata = createPageMetadata({
+  title: 'Денонощни аптеки Пулс в Бургас',
+  description: 'Аптеки Пулс в Бургас предлагат денонощно ниски цени, фармацевтична консултация и удобни локации в Изгрев и Славейков.',
+});
 
 export default function Home() {
   return (

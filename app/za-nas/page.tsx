@@ -6,6 +6,13 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { createPageMetadata } from '@/lib/site';
+
+export const metadata = createPageMetadata({
+  title: 'За нас',
+  description: 'Научете повече за Денонощни аптеки Пулс в Бургас - грижа, консултация, работа с НЗОК и подбрани продукти.',
+  path: '/za-nas',
+});
 
 const values = ['Отговорна консултация', 'Внимание към всеки клиент', 'Подбрани продукти', 'Удобни локации'];
 

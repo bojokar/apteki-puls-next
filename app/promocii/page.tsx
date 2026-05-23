@@ -8,6 +8,13 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import { promotions } from '@/lib/data';
+import { createPageMetadata } from '@/lib/site';
+
+export const metadata = createPageMetadata({
+  title: 'Промоции',
+  description: 'Актуални промоции и предложения в Денонощни аптеки Пулс в Бургас. Попитайте на място за условия и наличности.',
+  path: '/promocii',
+});
 
 export default function Promotions() {
   return (
